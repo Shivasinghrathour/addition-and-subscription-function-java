@@ -1,29 +1,53 @@
-let result = document.querySelector("#res")
-let add = document.querySelector("#btn-one")
-let minus = document.querySelector("#btn-two")
-let timer = document.querySelector("#timer")
-let num = 0;
+function updateClock() {
+  let nowTime = new Date();
+  let hours = nowTime.getHours();
+  let minuts = nowTime.getMinutes();
+  let seconds = nowTime.getSeconds();
+  let time = "AM";
 
-add.addEventListener("click", function(){
-    let newnum = ++num;
-    result.textContent = newnum;
-    console.log(newnum);
-    
-})
-minus.addEventListener("click", function(){
-    let newnum = --num;
-    result.textContent = newnum;
-    console.log(newnum);
-    
-})
+  if( hours >= 12 ){
+    time = "PM"    
+  }
 
-let count = 10;
-let counter = setInterval(function (){
-    count--;
-    timer.textContent = count;
-    if(count ===0){
-        clearInterval(counter);
-        alert("Time up!")
-        
-    }
-}, 1000)
+  if(hours==0){
+    hours = 12;
+  } else if (hours > 12){
+    hours = hours- 12;
+  }
+
+  hours = hours < 10 ? "0" + hours : hours;
+  minuts = minuts < 10 ? "0" + minuts : minuts;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  let currentTime = `${hours}:${minuts}:${seconds} ${time}`;
+
+  let showTime = document.querySelector("p");
+  showTime.textContent = currentTime;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+function date (){
+    let Currentday = new Date();
+    let day = Currentday.getDay();
+    console.log(day)
+    let currentDate = Currentday.getDate();
+    let year = Currentday.getFullYear();
+    let month = Currentday.getMonth();
+    console.log(month);
+
+    let months = ["Jan", "Fab", "Mar", "apr", "May", "jun"]
+    month = months[month]
+
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturaday"];
+    day = days[day]
+    console.log(day)
+   
+
+    let= showdate = `${currentDate}/${month}/${year} : ${day}`
+
+    let show = document.querySelector("#datee");
+
+    show.textContent = showdate;
+}
+date();

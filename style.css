@@ -1,88 +1,28 @@
-* {
-  padding: 0vh;
-  margin: 0vh;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+#clock {
+  background-color: rgb(195, 190, 190);
+  padding: 0 40px;
+  display: flex;
+  border-radius: 15px;
 }
 body {
-  background-color: lightcoral;
-
-
-}
-#main {
+  height: 500px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  display: flex;
-  height: 85vh;
-  justify-content: space-around;
-  align-items: center;
- 
 }
-#res-section {
-  height: 30vh;
-  width: 40vh;
-  background-color: pink;
-  box-shadow: 0vh 0.9vh 1vh rgba(0, 0, 0, 0.364);
-  border-radius: 2vh;
-  display: flex;
-  flex-direction: column;
+#clock p {
   justify-content: center;
-
-  justify-content: center;
-  align-items: center;
-}
-#res {
-  font-size: 15vh;
-}
-#btn {
-  width: 50vh;
+  font-weight: lighter;
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  font-size: 60px;
+  font-family: "Courier New", Courier, monospace;
 }
-#btn-one {
-  height: 6vh;
-  padding: 0 2vh;
-  font-size: 2.8vh;
-  font-family: sans-serif;
-  color: black;
-  border-radius: 1vh;
-  border: none;
-}
-#btn-one:hover {
-  height: 6vh;
-  padding: 0 2vh;
-  font-size: 2.8vh;
-  font-family: sans-serif;
-  color: black;
-  border: 0.2vh solid white;
-  background-color: lightcoral;
-  border-radius: 1vh;
-}
-#btn-two {
-  height: 6vh;
-  padding: 0 2vh;
-  font-size: 2.8vh;
-  font-family: sans-serif;
-  color: black;
-  border: 0.2vh solid white;
-  background-color: lightcoral;
-  border-radius: 1vh;
-}
-#btn-two:hover {
-  height: 6vh;
-  padding: 0 2vh;
-  font-size: 2.8vh;
-  font-family: sans-serif;
-  color: black;
-  background-color: white;
-  border-radius: 1vh;
-  border: none;
-}
-#timer {
-  height: 25vh;
-  background-color: pink;
-  width: 25vh;
-  border-radius: 50%;
-  font-size: 10vh;
+#date {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 44px;
+  font-family: 'Courier New', Courier, monospace;
 }
